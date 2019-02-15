@@ -3,7 +3,9 @@ import React from 'react';
 const menuItemStyle = {
 	paddingLeft: 10,
 	paddingRight: 10,
-	display: 'inline-block'
+	display: 'inline-block',
+	color: 'white',
+	cursor: 'pointer'
 };
 
 const MenuItem = (props) => {

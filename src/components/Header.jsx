@@ -4,10 +4,10 @@ import NavBar from './NavBar';
 import MenuItem from './MenuItem';
 
 const headerStyle = {
-	 marginTop: 5,
-	 height: 90,
+	 height: 100,
 	 display: 'flex',
-	 justifyContent: 'space-between'
+	 justifyContent: 'space-between',
+	 backgroundColor: '#000000'
 }
 
 const Header = (props) => {

@@ -10,7 +10,8 @@ const logoStyle = {
   	float: 'left',
   	marginLeft: 10,
   	height: 90,
-  	width: 200
+  	width: 200,
+  	alignSelf: 'center'
 };
 
 const Logo = (props) => {
