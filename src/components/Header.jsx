@@ -1,13 +1,12 @@
 import React from 'react';
 import Logo from './Logo'
 import NavBar from './NavBar';
-import MenuItem from './MenuItem';
 
 const headerStyle = {
 	 height: 100,
+	 margin: 20,
 	 display: 'flex',
-	 justifyContent: 'space-between',
-	 backgroundColor: '#000000'
+	 justifyContent: 'space-between'
 }
 
 const Header = (props) => {

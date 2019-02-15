@@ -4,8 +4,8 @@ const menuItemStyle = {
 	paddingLeft: 10,
 	paddingRight: 10,
 	display: 'inline-block',
-	color: 'white',
-	cursor: 'pointer'
+	cursor: 'pointer',
+	color: '#757c8b'
 };
 
 const MenuItem = (props) => {

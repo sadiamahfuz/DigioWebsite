@@ -1,15 +1,14 @@
 import React from 'react';
 import MenuItem from './MenuItem';
-import ScrollMenu from 'react-horizontal-scrolling-menu';
 
 const navBarStyle = {
 	alignSelf: 'flex-start'
 }
 
 const navItems = [
-	{text: 'About Us'},
-	{text: 'Our Work'},
-	{text: 'Testimonials'}
+	{text: 'About Us', selected: true},
+	{text: 'Our Work', selected: false},
+	{text: 'Testimonials', selected: false}
 ];
 
 export const NavBar = (props) => {
