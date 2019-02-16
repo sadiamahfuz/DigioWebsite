@@ -1,10 +1,19 @@
 import React from 'react';
 import MenuItem from './MenuItem';
-import MediaQuery from 'react-responsive';
+
+import { setDefaultBreakpoints, Breakpoint } from 'react-socks';
+setDefaultBreakpoints([
+  { xs: 0 },
+  { s: 376 },
+  { m: 600 },
+  { small: 769 },
+  { large: 1025 }
+]);
+
 
 const navBarStyle = {
 	alignSelf: 'flex-start'
-}
+};
 
 const navItems = [
 	{text: 'Home', selected: true, path: '/'},
@@ -18,16 +27,11 @@ export const NavBar = (props) => {
 	const navItemsMapped = navItems.map(item => <MenuItem text={item.text} path={item.path}/>);
 
 	return (
-		<div>
-		<MediaQuery minDeviceWidth={768}>
+		<Breakpoint m up>
 			<div className="navBar" style={navBarStyle}>
 				{navItemsMapped}
-				</div>
-		</MediaQuery>
-		<MediaQuery maxWidth={768}>
-        <div>Ok you are on a small screen</div>
-    </MediaQuery>
-		</div>
+			</div>
+		</Breakpoint>
 	);
 };
 
