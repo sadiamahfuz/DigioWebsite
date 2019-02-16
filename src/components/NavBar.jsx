@@ -11,6 +11,7 @@ const smallScreenMenuStyle = {
 	display: 'none'
 };
 
+
 const navItems = [
 	{text: 'Home', selected: true, path: '/'},
 	{text: 'About Us', selected: false, path: '/about'},
@@ -30,7 +31,7 @@ const burgerToggle = () => {
 export const NavBar = (props) => {
 
 	const navItemsMapped = navItems.map(item => <MenuItem text={item.text} path={item.path}/>);
-	const navItemsMappedBurger = navItems.map(item => <MenuItemBurger text={item.text} path={item.path}/>);
+	const navItemsMappedBurger = navItems.map(item => <MenuItemBurger text={item.text} path={item.path} onClick={burgerToggle}/>);
 
 	return (
 		<div className="navBar" style={navBarStyle}>

@@ -12,7 +12,7 @@ const menuItemStyle = {
 const MenuItemBurger = (props) => {
 	return (
 		<NavLink to={props.path}>
-				<div style={menuItemStyle} className='menuItem'> {props.text} </div>
+				<div style={menuItemStyle} className='menuItem' onClick={props.onClick}> {props.text} </div>
 		</NavLink>
 	);
 }
