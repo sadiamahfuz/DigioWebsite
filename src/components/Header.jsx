@@ -10,8 +10,6 @@ const headerStyle = {
 }
 
 const Header = (props) => {
-	//const items = [{text: 'sadia'}, {text: 'sami'}];
-
 	return (
 		<div classname="header" style={headerStyle}>
 			<Logo />
