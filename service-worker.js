@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/DigioWebsite/precache-manifest.3adb23ceb15ed62cd4feb1dbc7d1a729.js"
+  "/DigioWebsite/precache-manifest.46af551a35baa693be2be996ac3e05f7.js"
 );
 
 workbox.clientsClaim();
