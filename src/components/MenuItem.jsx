@@ -11,7 +11,9 @@ const menuItemStyle = {
 
 const MenuItem = (props) => {
 	return (
-		<NavLink to={props.path}> <div style={menuItemStyle} className='menuItem'> {props.text} </div>  </NavLink>
+		<NavLink to={props.path}>
+				<div style={menuItemStyle} className='menuItem'> {props.text} </div>
+		</NavLink>
 	);
 }
 
