@@ -1,5 +1,6 @@
 import React from 'react';
 import MenuItem from './MenuItem';
+import MenuItemBurger from './MenuItemBurger';
 import { Breakpoint } from 'react-socks';
 
 const navBarStyle = {
@@ -29,6 +30,7 @@ const burgerToggle = () => {
 export const NavBar = (props) => {
 
 	const navItemsMapped = navItems.map(item => <MenuItem text={item.text} path={item.path}/>);
+	const navItemsMappedBurger = navItems.map(item => <MenuItemBurger text={item.text} path={item.path}/>);
 
 	return (
 		<div className="navBar" style={navBarStyle}>
@@ -37,7 +39,7 @@ export const NavBar = (props) => {
 			</Breakpoint>
 			<Breakpoint small only>
 				<i className="fa fa-bars fa-2x" onClick={burgerToggle}></i>
-				<div className="smallScreenMenu" style={smallScreenMenuStyle}> show menu </div>
+				<div className="smallScreenMenu" style={smallScreenMenuStyle}> {navItemsMappedBurger} </div>
 			</Breakpoint>
 		</div>
 	);
