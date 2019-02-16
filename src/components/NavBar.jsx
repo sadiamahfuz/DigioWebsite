@@ -1,5 +1,7 @@
 import React from 'react';
 import MenuItem from './MenuItem';
+import { Breakpoint } from 'react-socks';
+
 
 const navBarStyle = {
 	alignSelf: 'flex-start'
@@ -18,7 +20,12 @@ export const NavBar = (props) => {
 
 	return (
 		<div className="navBar" style={navBarStyle}>
-			{navItemsMapped}
+		 	<Breakpoint medium up>
+				{navItemsMapped}
+			</Breakpoint>
+			<Breakpoint small only>
+				<div> To do small screen </div>
+			</Breakpoint>
 		</div>
 	);
 };

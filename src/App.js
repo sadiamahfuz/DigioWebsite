@@ -7,20 +7,30 @@ import AboutUs from './components/pages/AboutUs';
 import HomePage from './components/pages/HomePage';
 import OurWork from './components/pages/OurWork';
 import Testimonials from './components/pages/Testimonials';
+import { BreakpointProvider } from 'react-socks';
+
+import { setDefaultBreakpoints } from 'react-socks';
+
+setDefaultBreakpoints([
+  { small: 0 },
+  { medium: 600 }
+]);
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Header />
-        <div className="page">
-        	<Route exact path="/" component={HomePage}/>
-          <Route path="/about" component={AboutUs}/>
-          <Route path="/ourwork" component={OurWork}/>
-          <Route path="/testimonials" component={Testimonials}/>
+      <BreakpointProvider>
+        <div className="App">
+          <Header />
+          <div className="page">
+          	<Route exact path="/" component={HomePage}/>
+            <Route path="/about" component={AboutUs}/>
+            <Route path="/ourwork" component={OurWork}/>
+            <Route path="/testimonials" component={Testimonials}/>
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
+      </BreakpointProvider>
     );
   }
 }
