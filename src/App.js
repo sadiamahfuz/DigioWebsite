@@ -28,7 +28,6 @@ class App extends Component {
             <Route path="/ourwork" component={OurWork}/>
             <Route path="/testimonials" component={Testimonials}/>
           </div>
-          <Footer />
         </div>
       </BreakpointProvider>
     );
