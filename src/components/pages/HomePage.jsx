@@ -1,6 +1,7 @@
 import React from 'react';
 import { pageStyle } from '../styles/commonStyles';
 import Typing from 'react-typing-animation';
+import Footer from '../Footer';
 
 const HomePage = (props) => {
 	const homePageText = "Lorem ipsum dolor sit amet, an iusto incorrupte ius, putent incorrupte mea eu, ne reque dissentiet vix. \
@@ -13,6 +14,7 @@ const HomePage = (props) => {
 	Inani omnium quo in, et quem congue vel."
 
 	return (
+<div>
 		<div className='homePage' style={pageStyle}>
 			<Typing>
 				<h1> Hello, </h1>
@@ -21,6 +23,8 @@ const HomePage = (props) => {
 			<p>
 				{homePageText}
 			</p>
+		</div>
+		<Footer />
 		</div>
 	);
 };
