@@ -2,8 +2,6 @@ import React from 'react';
 import PageTitle from './PageTitle';
 import { pageStyle } from '../styles/commonStyles';
 import WhatWeDoBox from '../WhatWeDoBox';
-import Footer from '../Footer';
-
 
 const OurWork = (props) => {
 	return (

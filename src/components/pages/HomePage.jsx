@@ -1,9 +1,9 @@
 import React from 'react';
 import { pageStyle } from '../styles/commonStyles';
 import Typing from 'react-typing-animation';
-import Footer from '../Footer';
 
 const HomePage = (props) => {
+	// eslint-disable-next-line
 	const homePageText = "Lorem ipsum dolor sit amet, an iusto incorrupte ius, putent incorrupte mea eu, ne reque dissentiet vix. \
 	Ei hinc nihil delectus quo, cum at malis dicat intellegebat, dicta aperiam accumsan at nec. \
 	Tractatos ocurreret ex eum. Sed idque postea postulant ut. Velit commune duo cu, pro lorem cetero temporibus eu. \

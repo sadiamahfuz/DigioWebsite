@@ -21,6 +21,7 @@ const imageStyle = {
 };
 
 const Description = () => {
+  // eslint-disable-next-line
   const homePageText = "Lorem ipsum dolor sit amet, an iusto incorrupte ius, putent incorrupte mea eu, ne reque dissentiet vix. \
 	Ei hinc nihil delectus quo, cum at malis dicat intellegebat, dicta aperiam accumsan at nec. \
 	Tractatos ocurreret ex eum. Sed idque postea postulant ut. Velit commune duo cu, pro lorem cetero temporibus eu. \
@@ -40,7 +41,7 @@ const Description = () => {
 const Image = () => {
   return (
     <div style={imageDivStyle}>
-      <img src="https://placeimg.com/640/480/any" style={imageStyle} />
+      <img src="https://placeimg.com/640/480/any" alt="anImage" style={imageStyle} />
     </div>
   );
 };
