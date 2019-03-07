@@ -16,7 +16,6 @@ const OurWork = (props) => {
 			<WhatWeDoBox />
 			<WhatWeDoBox />
 		</div>
-		<Footer />
 		</div>
 	);
 };
