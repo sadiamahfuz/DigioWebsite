@@ -13,7 +13,7 @@ import { setDefaultBreakpoints } from 'react-socks';
 
 setDefaultBreakpoints([
   { small: 0 },
-  { medium: 600 }
+  { medium: 700 }
 ]);
 
 class App extends Component {
