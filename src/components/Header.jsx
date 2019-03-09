@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from './Logo'
 import NavBar from './NavBar';
+import logo from '../images/transparent.png';
 
 const headerStyle = {
 	 height: 100,
@@ -12,7 +13,7 @@ const headerStyle = {
 const Header = (props) => {
 	return (
 		<div classname="header" style={headerStyle}>
-			<Logo />
+			<Logo logo={logo}/>
 			<NavBar />
 		</div>
 	);
