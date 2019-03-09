@@ -2,7 +2,6 @@
   "name": "digio_app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sadiamahfuz.github.io/DigioWebsite/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.1",
@@ -17,7 +16,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "aws s3 sync build/ s3://hellodigio",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
