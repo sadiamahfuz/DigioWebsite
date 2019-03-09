@@ -2,6 +2,19 @@ import React from 'react';
 import { pageStyle } from '../styles/commonStyles';
 import Typing from 'react-typing-animation';
 
+const Image = (props) => {
+	const imageStyle = {
+		maxWidth: '100%'
+	};
+
+  return (
+    <div>
+      <img src="https://placeimg.com/1280/720/any" alt="anImage" style={imageStyle}/>
+    </div>
+  );
+};
+
+
 const HomePage = (props) => {
 	// eslint-disable-next-line
 	const homePageText = "Lorem ipsum dolor sit amet, an iusto incorrupte ius, putent incorrupte mea eu, ne reque dissentiet vix. \
@@ -14,16 +27,17 @@ const HomePage = (props) => {
 	Inani omnium quo in, et quem congue vel."
 
 	return (
-<div>
-		<div className='homePage' style={pageStyle}>
-			<Typing>
-				<h1> Hello, </h1>
-				<h1> Welcome to Digio! </h1>
-			</Typing>
-			<p>
-				{homePageText}
-			</p>
-		</div>
+		<div>
+			<div className='homePage' style={pageStyle}>
+				<Typing>
+					<h1> Hello, </h1>
+					<h1> Welcome to Digio! </h1>
+				</Typing>
+				<p>
+					{homePageText}
+				</p>
+				<Image />
+			</div>
 		</div>
 	);
 };
