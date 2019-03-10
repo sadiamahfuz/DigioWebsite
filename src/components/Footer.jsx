@@ -1,5 +1,6 @@
 import React from 'react';
-import Logo from './Logo'
+import Logo from './Logo';
+import ContactDetailsCard from './ContactDetailsCard';
 import logo from '../images/inverse.png';
 
 const footerStyle = {
@@ -10,13 +11,15 @@ const footerStyle = {
   width: '100%',
   martinTop: 50,
   display: 'flex',
-  justifyContent: 'space-between'
+  justifyContent: 'space-between',
+  alignItems: 'center'
 };
 
 const Footer = (props) => {
   return (
     <div style={footerStyle}>
       <Logo logo={logo}/>
+      <ContactDetailsCard />
     </div>
   );
 };
