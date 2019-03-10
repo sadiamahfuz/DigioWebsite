@@ -11,6 +11,9 @@ const smallScreenMenuStyle = {
 	display: 'none'
 };
 
+const burgerMenuIconStyle = {
+	color: '#757c8b'
+};
 
 const navItems = [
 	{text: 'Home', selected: true, path: '/'},
@@ -39,7 +42,7 @@ export const NavBar = (props) => {
 				{navItemsMapped}
 			</Breakpoint>
 			<Breakpoint small only>
-				<i className="fa fa-bars fa-2x" onClick={burgerToggle}></i>
+				<i className="fa fa-bars fa-2x" onClick={burgerToggle} style={burgerMenuIconStyle}></i>
 				<div className="smallScreenMenu" style={smallScreenMenuStyle}> {navItemsMappedBurger} </div>
 			</Breakpoint>
 		</div>
