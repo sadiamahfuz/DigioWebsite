@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
+import Button from '@material-ui/core/Button';
 
 const menuItemStyle = {
 	paddingLeft: 10,
@@ -9,10 +10,12 @@ const menuItemStyle = {
 	color: '#757c8b'
 };
 
+
+
 const MenuItem = (props) => {
 	return (
 		<NavLink to={props.path}>
-				<div style={menuItemStyle} className='menuItem'> {props.text} </div>
+				<Button variant="text" style={menuItemStyle} className='menuItem'> {props.text} </Button>
 		</NavLink>
 	);
 }
