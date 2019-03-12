@@ -1,10 +1,12 @@
 import React from 'react';
 import { pageStyle } from '../styles/commonStyles';
 import Typing from 'react-typing-animation';
+import Button from '@material-ui/core/Button';
 
 const Image = (props) => {
 	const imageStyle = {
-		maxWidth: '100%'
+		maxWidth: '100%',
+		marginTop: 10
 	};
 
   return (
@@ -14,6 +16,9 @@ const Image = (props) => {
   );
 };
 
+const contactUsClicked = () => {
+	console.log("clicked");
+};
 
 const HomePage = (props) => {
 	// eslint-disable-next-line
@@ -36,6 +41,9 @@ const HomePage = (props) => {
 				<p>
 					{homePageText}
 				</p>
+				<Button variant="contained" color="primary" onClick={contactUsClicked}>
+      		CONTACT US
+    		</Button>
 				<Image />
 			</div>
 		</div>
