@@ -22,6 +22,27 @@ export class HomePage extends Component {
 		marginTop: 10
 	};
 
+	writingBigStyle = {
+		fontSize: 20,
+		fontWeight: 800,
+		fontStyle: 'italic',
+		marginLeft: 10,
+		marginRight: 10,
+		marginTop: 0,
+		martinTopBottom: 0
+	};
+
+	writingSmallStyle = {
+		marginTop: 0,
+		martinTopBottom: 0
+	};
+
+	messageStyle = {
+		display: 'flex',
+		flexWrap: 'wrap',
+		alignItems: 'flex-end'
+	}
+
 	render() {
 		return (
 			<div>
@@ -30,9 +51,16 @@ export class HomePage extends Component {
 						<h1> Hello, </h1>
 						<h1> Welcome to Digio! </h1>
 					</Typing>
-					<p>
-						{this.homePageText}
-					</p>
+					<div style={this.messageStyle}>
+						<p style={this.writingSmallStyle}>We are a </p>
+						<h1 style={this.writingBigStyle}> creative digital agency </h1>
+						<p style={this.writingSmallStyle}> and we offer services ranging from </p>
+						<h1 style={this.writingBigStyle}> digital marketing </h1>
+						<p style={this.writingSmallStyle}> to </p>
+						<h1 style={this.writingBigStyle}> web and application development. </h1>
+						<p style={this.writingSmallStyle}> We are passionate about meeting your digital needs so you can focus on the things that are important to you. </p>
+						<p style={this.writingSmallStyle}> Get in touch to find out more, or place your first order.</p>
+					</div>
 					<Button variant="contained" color="primary" onClick={this.contactUsClicked}>
 	      		CONTACT US
 	    		</Button>

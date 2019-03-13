@@ -19,7 +19,6 @@ const Footer = (props) => {
   return (
     <div style={footerStyle}>
       <Logo logo={logo}/>
-      <ContactDetailsCard />
     </div>
   );
 };

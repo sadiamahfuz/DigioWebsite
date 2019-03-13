@@ -7,7 +7,7 @@ const OurWork = (props) => {
 	return (
 <div>
 		<div className='ourWork' style={pageStyle}>
-			<PageTitle title='What We Do' />
+			<PageTitle title='Our Services' />
 			<p> Lorem ipsum dolor sit amet, an iusto incorrupte ius, putent incorrupte mea eu, ne reque dissentiet vix. Ei hinc nihil delectus quo, cum at malis dicat intellegebat, dicta aperiam accumsan at nec. Tractatos ocurreret ex eum. Sed idque postea postulant ut. Velit commune duo cu, pro lorem cetero temporibus eu. </p>
 			<WhatWeDoBox />
 			<WhatWeDoBox />
