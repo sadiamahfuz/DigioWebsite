@@ -17,30 +17,26 @@ export class HomePage extends Component {
 		this.props.history.push("/contactus")
 	};
 
+	style = {
+		fontWeight: 300,
+		fontSize: 24,
+		maxWidth: 800
+	};
+
+	smallTextStyle = {
+		fontWeight: 300,
+		fontSize: 20,
+		maxWidth: 800
+	};
+
 	imageStyle = {
 		maxWidth: 400,
 		marginTop: 10
 	};
 
-	writingBigStyle = {
-		fontSize: 20,
-		fontWeight: 800,
-		fontStyle: 'italic',
-		marginLeft: 10,
-		marginRight: 10,
-		marginTop: 0,
-		martinTopBottom: 0
-	};
-
-	writingSmallStyle = {
-		marginTop: 0,
-		martinTopBottom: 0
-	};
-
 	messageStyle = {
 		display: 'flex',
-		flexWrap: 'wrap',
-		alignItems: 'flex-end'
+		flexDirection: 'column'
 	}
 
 	render() {
@@ -52,14 +48,15 @@ export class HomePage extends Component {
 						<h1> Welcome to Digio! </h1>
 					</Typing>
 					<div style={this.messageStyle}>
-						<p style={this.writingSmallStyle}>We are a </p>
-						<h1 style={this.writingBigStyle}> creative digital agency </h1>
-						<p style={this.writingSmallStyle}> and we offer services ranging from </p>
-						<h1 style={this.writingBigStyle}> digital marketing </h1>
-						<p style={this.writingSmallStyle}> to </p>
-						<h1 style={this.writingBigStyle}> web and application development. </h1>
-						<p style={this.writingSmallStyle}> We are passionate about meeting your digital needs so you can focus on the things that are important to you. </p>
-						<p style={this.writingSmallStyle}> Get in touch to find out more, or place your first order.</p>
+						<p style={this.style}> We are a
+							<strong><i> Creative Digital Agency </i></strong>
+							and we offer services ranging from
+							<strong><i> Digital Marketing </i></strong>
+							to
+							<strong><i> Web and Application Development</i></strong>.
+						</p>
+						<p style={this.smallTextStyle}> We are passionate about meeting your digital needs so you can focus on the things that are important to you. </p>
+						<p style={this.smallTextStyle}> Get in touch to <strong> find out more</strong>, or place your <strong>first order</strong>.</p>
 					</div>
 					<Button variant="contained" color="primary" onClick={this.contactUsClicked}>
 	      		CONTACT US
