@@ -53,7 +53,11 @@ export class HomePage extends Component {
 							and we offer services ranging from
 							<strong><i> Digital Marketing </i></strong>
 							to
-							<strong><i> Web and Application Development</i></strong>.
+							<strong><i> Web  </i></strong>
+							and
+							<strong><i> Application Development </i></strong>
+							and
+							<strong><i> Hardware Prototyping</i></strong>.
 						</p>
 						<p style={this.smallTextStyle}> We are passionate about meeting your digital needs so you can focus on the things that are important to you. </p>
 						<p style={this.smallTextStyle}> Get in touch to <strong> find out more</strong>, or place your <strong>first order</strong>.</p>
