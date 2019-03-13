@@ -2,6 +2,7 @@ import React from 'react';
 import { pageStyle } from '../styles/commonStyles';
 import Typing from 'react-typing-animation';
 import Button from '@material-ui/core/Button';
+import image from '../../images/homePageImage.jpg';
 
 const Image = (props) => {
 	const imageStyle = {
@@ -11,7 +12,7 @@ const Image = (props) => {
 
   return (
     <div>
-      <img src="https://placeimg.com/1280/720/any" alt="anImage" style={imageStyle}/>
+      <img src={image} alt="anImage" style={imageStyle}/>
     </div>
   );
 };
@@ -22,14 +23,10 @@ const contactUsClicked = () => {
 
 const HomePage = (props) => {
 	// eslint-disable-next-line
-	const homePageText = "Lorem ipsum dolor sit amet, an iusto incorrupte ius, putent incorrupte mea eu, ne reque dissentiet vix. \
-	Ei hinc nihil delectus quo, cum at malis dicat intellegebat, dicta aperiam accumsan at nec. \
-	Tractatos ocurreret ex eum. Sed idque postea postulant ut. Velit commune duo cu, pro lorem cetero temporibus eu. \
-	Utinam civibus voluptua id per. \
-	Aliquip meliore ex vix, ex nusquam epicurei liberavisse est. \
-	Pro cu vero nullam praesent, vim in fabulas nonumes apeirian, in vel dicta phaedrum. \
-	Habemus corpora reprimique ad sit, mel ut minim sadipscing, vitae iudicabit eos eu. \
-	Inani omnium quo in, et quem congue vel."
+	const homePageText = "We are a creative digital agency based in London, and are commited to helping you with your projects so you can focus on the things that are important to you. \
+	We have expertise in everything digital from branding and marketing to product development (software & hardware). \
+	We specialise in:Digital branding & marketing content development (including digital strategy). - Digital product development (software and hardware) (i.e websites, apps, IoT devices etc).\
+	Please get it touch to find out more and how we can help!"
 
 	return (
 		<div>
