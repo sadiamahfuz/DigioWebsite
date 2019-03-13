@@ -19,7 +19,7 @@ const navItems = [
 	{text: 'Home', selected: true, path: '/'},
 	{text: 'About Us', selected: false, path: '/about'},
 	{text: 'Our Work', selected: false, path: '/ourwork'},
-	{text: 'Blog', selected: false, path: '/blog'}
+	{text: 'Contact Us', selected: false, path: '/contactus'}
 ];
 
 const burgerToggle = () => {

@@ -3,13 +3,13 @@ import PageTitle from './PageTitle';
 import { pageStyle } from '../styles/commonStyles';
 
 
-const Blog = (props) => {
+const ContactUs = (props) => {
 	return (
-		<div className='testimonials' style={pageStyle}>
-			<PageTitle title='Blog' />
+		<div className='contactUs' style={pageStyle}>
+			<PageTitle title='Contact Us' />
 			<p> Coming Soon </p>
 		</div>
 	);
 };
 
-export default Blog;
+export default ContactUs;
