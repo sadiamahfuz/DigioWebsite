@@ -12,7 +12,7 @@ const headerStyle = {
 
 const Header = (props) => {
 	return (
-		<div classname="header" style={headerStyle}>
+		<div className="header" style={headerStyle}>
 			<Logo logo={logo}/>
 			<NavBar />
 		</div>

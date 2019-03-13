@@ -3,20 +3,8 @@ import { pageStyle } from '../styles/commonStyles';
 import Typing from 'react-typing-animation';
 import Button from '@material-ui/core/Button';
 import image from '../../images/homePageImage.jpg';
+import Image from '../Image';
 import { withRouter } from 'react-router-dom';
-
-const Image = (props) => {
-	const imageStyle = {
-		maxWidth: '100%',
-		marginTop: 10
-	};
-
-  return (
-    <div>
-      <img src={image} alt="anImage" style={imageStyle}/>
-    </div>
-  );
-};
 
 export class HomePage extends Component {
 	// eslint-disable-next-line
@@ -27,6 +15,11 @@ export class HomePage extends Component {
 
 	contactUsClicked = () => {
 		this.props.history.push("/contactus")
+	};
+
+	imageStyle = {
+		maxWidth: 400,
+		marginTop: 10
 	};
 
 	render() {
@@ -43,7 +36,7 @@ export class HomePage extends Component {
 					<Button variant="contained" color="primary" onClick={this.contactUsClicked}>
 	      		CONTACT US
 	    		</Button>
-					<Image />
+					<Image image={image} style={this.imageStyle} />
 				</div>
 			</div>
 		);

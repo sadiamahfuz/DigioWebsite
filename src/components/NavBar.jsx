@@ -16,7 +16,7 @@ const burgerMenuIconStyle = {
 };
 
 const navItems = [
-	{text: 'Home', selected: true, path: '/'},
+	{text: 'Home', selected: true, path: '/', key:'home'},
 	{text: 'About Us', selected: false, path: '/about'},
 	{text: 'Our Work', selected: false, path: '/ourwork'},
 	{text: 'Contact Us', selected: false, path: '/contactus'}

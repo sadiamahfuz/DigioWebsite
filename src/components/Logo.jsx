@@ -15,7 +15,7 @@ const logoStyle = {
 
 const Logo = (props) => {
 	return (
-		<div classname="logo" style={logoDivStyle}>
+		<div className="logo" style={logoDivStyle}>
 			<img style={logoStyle} src={props.logo} alt="Digio"/>
 		</div>
 	);
