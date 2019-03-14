@@ -5,15 +5,13 @@ import WhatWeDoBox from '../WhatWeDoBox';
 
 const OurWork = (props) => {
 	return (
-<div>
-		<div className='ourWork' style={pageStyle}>
+		<div className='ourWork' style={pageStyle} id="services">
 			<PageTitle title='Our Services' />
-			<p> Lorem ipsum dolor sit amet, an iusto incorrupte ius, putent incorrupte mea eu, ne reque dissentiet vix. Ei hinc nihil delectus quo, cum at malis dicat intellegebat, dicta aperiam accumsan at nec. Tractatos ocurreret ex eum. Sed idque postea postulant ut. Velit commune duo cu, pro lorem cetero temporibus eu. </p>
+			<p> We offer a range of services. Below are a list of services we offer.  </p>
 			<WhatWeDoBox />
 			<WhatWeDoBox />
 			<WhatWeDoBox />
 			<WhatWeDoBox />
-		</div>
 		</div>
 	);
 };

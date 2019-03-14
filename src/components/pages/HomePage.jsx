@@ -4,22 +4,16 @@ import Typing from 'react-typing-animation';
 import Button from '@material-ui/core/Button';
 import image from '../../images/homePageImage.jpg';
 import Image from '../Image';
-import { withRouter } from 'react-router-dom';
+import { Link, animateScroll as scroll } from "react-scroll";
 
 export class HomePage extends Component {
-	// eslint-disable-next-line
-	homePageText = "We are a creative digital agency based in London, and are commited to helping you with your projects so you can focus on the things that are important to you. \
-	We have expertise in everything digital from branding and marketing to product development (software & hardware). \
-	We specialise in:Digital branding & marketing content development (including digital strategy). - Digital product development (software and hardware) (i.e websites, apps, IoT devices etc).\
-	Please get it touch to find out more and how we can help!"
-
 	contactUsClicked = () => {
-		this.props.history.push("/contactus")
+		//this.props.history.push("/contactus")
 	};
 
 	style = {
 		fontWeight: 300,
-		fontSize: 24,
+		fontSize: 20,
 		maxWidth: 800
 	};
 
@@ -41,8 +35,7 @@ export class HomePage extends Component {
 
 	render() {
 		return (
-			<div>
-				<div className='homePage' style={pageStyle}>
+				<div className='homePage' style={pageStyle} id="home">
 					<Typing>
 						<h1> Hello, </h1>
 						<h1> Welcome to Digio! </h1>
@@ -59,18 +52,19 @@ export class HomePage extends Component {
 							and
 							<strong><i> Hardware Prototyping</i></strong>.
 						</p>
-						<p style={this.smallTextStyle}> We are passionate about meeting your digital needs so you can focus on the things that are important to you. </p>
-						<p style={this.smallTextStyle}> Get in touch to <strong> find out more</strong>, or place your <strong>first order</strong>.</p>
+						<p style={this.style}> We are passionate about meeting your digital needs so you can focus on the things that are important to you. </p>
+						<p style={this.style}> Get in touch to <strong> find out more</strong>, or place your <strong>first order</strong>.</p>
 					</div>
-					<Button variant="contained" color="primary" onClick={this.contactUsClicked}>
-	      		CONTACT US
-	    		</Button>
+					<Link to={"contact"} duration={500} offset={-50} smooth={true}>
+						<Button variant="contained" color="primary">
+	      			CONTACT US
+	    			</Button>
+					</Link>
 					<Image image={image} style={this.imageStyle} />
 				</div>
-			</div>
 		);
 	}
 
 };
 
-export default withRouter(HomePage);
+export default HomePage;

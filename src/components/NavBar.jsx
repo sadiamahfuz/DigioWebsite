@@ -16,10 +16,9 @@ const burgerMenuIconStyle = {
 };
 
 const navItems = [
-	{text: 'Home', selected: true, path: '/', key:'home'},
-	{text: 'About Us', selected: false, path: '/about'},
-	{text: 'Our Services', selected: false, path: '/ourwork'},
-	{text: 'Contact Us', selected: false, path: '/contactus'}
+	{text: 'Home', selected: true, id:'home'},
+	{text: 'Our Services', selected: false, id: 'services'},
+	{text: 'Contact Us', selected: false, id: 'contact'}
 ];
 
 const burgerToggle = () => {
@@ -33,8 +32,8 @@ const burgerToggle = () => {
 
 export const NavBar = (props) => {
 
-	const navItemsMapped = navItems.map(item => <MenuItem text={item.text} path={item.path}/>);
-	const navItemsMappedBurger = navItems.map(item => <MenuItemBurger text={item.text} path={item.path} onClick={burgerToggle}/>);
+	const navItemsMapped = navItems.map(item => <MenuItem text={item.text} id={item.id}/>);
+	const navItemsMappedBurger = navItems.map(item => <MenuItemBurger text={item.text} id={item.id} onClick={burgerToggle}/>);
 
 	return (
 		<div className="navBar" style={navBarStyle}>

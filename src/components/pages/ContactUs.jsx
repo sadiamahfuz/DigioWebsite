@@ -52,7 +52,7 @@ export class ContactUs extends Component  {
 
 	render() {
 		return (
-			<div className='contactUs' style={pageStyle}>
+			<div className='contactUs' style={pageStyle} id="contact">
 				<PageTitle title='Contact Us' />
 				<TextField variant="outlined" placeholder="Your name" label="Name" style={this.inputStyle} onChange={this.onNameChange}/>
 				<TextField variant="outlined" placeholder="Your email" label="Email" style={this.inputStyle} onChange={this.onEmailChange}/>

@@ -1,6 +1,6 @@
 import React from 'react';
-import { NavLink } from "react-router-dom";
 import Button from '@material-ui/core/Button';
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const menuItemStyle = {
 	paddingLeft: 10,
@@ -12,9 +12,9 @@ const menuItemStyle = {
 
 const MenuItemBurger = (props) => {
 	return (
-		<NavLink to={props.path}>
+		<Link to={props.id} duration={500} offset={-50} smooth={true}>
 				<Button variant='text' style={menuItemStyle} className='menuItem' onClick={props.onClick}> {props.text} </Button>
-		</NavLink>
+		</Link>
 	);
 }
 
