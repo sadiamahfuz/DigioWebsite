@@ -4,7 +4,7 @@ import Typing from 'react-typing-animation';
 import Button from '@material-ui/core/Button';
 import image from '../../images/homePageImage.jpg';
 import Image from '../Image';
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 export class HomePage extends Component {
 	contactUsClicked = () => {
