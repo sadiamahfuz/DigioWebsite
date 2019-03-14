@@ -1,6 +1,7 @@
 export const pageStyle = {
-	margin: 50,
+	marginLeft: 50,
+	marginRight: 20,
+	marginTop: 20,
 	color: '#757c8b',
-	position: 'relative',
-	minHeight: '100vh'
+	position: 'relative'
 };

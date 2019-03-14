@@ -7,7 +7,11 @@ const headerStyle = {
 	 height: 100,
 	 margin: 20,
 	 display: 'flex',
-	 justifyContent: 'space-between'
+	 justifyContent: 'space-between',
+	 position: 'sticky',
+	 position: '-webkit-sticky',
+	 top: 0,
+	 zIndex: 1000
 }
 
 const Header = (props) => {

@@ -6,9 +6,3 @@
 body {
   font-family: 'Lato', sans-serif
 }
-
-.page {
-	margin: 20;
-	display: flex;
-	align-items: center;
-}
