@@ -9,9 +9,8 @@ const headerStyle = {
 	 display: 'flex',
 	 justifyContent: 'space-between',
 	 position: 'sticky',
-	 position: '-webkit-sticky',
 	 top: 0,
-	 zIndex: 1000
+	 zIndex: 10
 }
 
 const Header = (props) => {

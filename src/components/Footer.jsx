@@ -1,6 +1,5 @@
 import React from 'react';
 import Logo from './Logo';
-import ContactDetailsCard from './ContactDetailsCard';
 import logo from '../images/inverse.png';
 
 const footerStyle = {
