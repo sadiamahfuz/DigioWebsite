@@ -7,10 +7,6 @@ import Image from '../Image';
 import { Link } from "react-scroll";
 
 export class HomePage extends Component {
-	contactUsClicked = () => {
-		//this.props.history.push("/contactus")
-	};
-
 	style = {
 		fontWeight: 300,
 		fontSize: 20,

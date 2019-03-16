@@ -5,7 +5,6 @@ import { Breakpoint } from 'react-socks';
 
 const navBarStyle = {
 	alignSelf: 'flex-start',
-	padding: 20
 }
 
 const smallScreenMenuStyle = {
@@ -13,7 +12,7 @@ const smallScreenMenuStyle = {
 };
 
 const burgerMenuIconStyle = {
-	color: '#757c8b'
+	color: '#757c8b',
 };
 
 const navItems = [

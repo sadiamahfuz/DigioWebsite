@@ -6,7 +6,6 @@ import HomePage from './components/pages/HomePage';
 import OurWork from './components/pages/OurWork';
 import ContactUs from './components/pages/ContactUs';
 import { BreakpointProvider } from 'react-socks';
-import { StickyContainer, Sticky } from "react-sticky";
 import { setDefaultBreakpoints } from 'react-socks';
 
 setDefaultBreakpoints([

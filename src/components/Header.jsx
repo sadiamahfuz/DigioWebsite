@@ -12,7 +12,7 @@ class Header extends Component {
 		zIndex: 10,
 		position: 'fixed',
 		backgroundColor: 'white',
-		width: '100%'
+		width: '90%'
 	};
 
 	render() {
