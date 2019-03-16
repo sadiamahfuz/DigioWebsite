@@ -16,11 +16,20 @@ export class ContactUs extends Component  {
 	  }
 
 	inputStyle = {
-		width: '100%',
+		maxWidth: 800,
 		marginTop: 6,
 		marginBottom: 16,
 		fontSize: 16,
 		resize: 'vertical'
+	};
+
+	style = {
+		display: 'flex',
+		flexDirection: 'column'
+	};
+
+	buttonStyle = {
+		width: 100
 	};
 
 	sendEmail = () => {
@@ -53,13 +62,15 @@ export class ContactUs extends Component  {
 	render() {
 		return (
 			<div className='contactUs' style={pageStyle} id="contact">
+			<div style={this.style}>
 				<PageTitle title='Contact Us' />
 				<TextField variant="outlined" placeholder="Your name" label="Name" style={this.inputStyle} onChange={this.onNameChange}/>
 				<TextField variant="outlined" placeholder="Your email" label="Email" style={this.inputStyle} onChange={this.onEmailChange}/>
 				<TextField variant="outlined" placeholder="Your message" multiline={true} rows={10} label="Your message" style={this.inputStyle} onChange={this.onMessageChange}/>
-				<Button variant="contained" color="primary" style={this.inputStyle} onClick={this.sendEmail}>
+				<Button variant="contained" color="primary" style={this.buttonStyle} onClick={this.sendEmail}>
 					SUBMIT
 				</Button>
+				</div>
 			</div>
 		);
 	}

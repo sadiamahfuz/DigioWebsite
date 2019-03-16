@@ -51,7 +51,7 @@ export class HomePage extends Component {
 						<p style={this.style}> We are passionate about meeting your digital needs so you can focus on the things that are important to you. </p>
 						<p style={this.style}> Get in touch to <strong> find out more</strong>, or place your <strong>first order</strong>.</p>
 					</div>
-					<Link to={"contact"} duration={500} offset={-50} smooth={true}>
+					<Link to={"contact"} duration={500} offset={-140} smooth={true}>
 						<Button variant="contained" color="primary">
 	      			CONTACT US
 	    			</Button>
