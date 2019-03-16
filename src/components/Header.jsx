@@ -1,25 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Logo from './Logo'
 import NavBar from './NavBar';
 import logo from '../images/transparent.png';
 
-const headerStyle = {
-	 height: 100,
-	 margin: 20,
-	 display: 'flex',
-	 justifyContent: 'space-between',
-	 position: 'sticky',
-	 top: 0,
-	 zIndex: 10
-}
+class Header extends Component {
+	headerStyle = {
+		height: 100,
+		padding: 20,
+		display: 'flex',
+		justifyContent: 'space-between',
+		zIndex: 10,
+		position: 'fixed',
+		backgroundColor: 'white',
+		width: '100%'
+	};
 
-const Header = (props) => {
-	return (
-		<div className="header" style={headerStyle}>
-			<Logo logo={logo}/>
-			<NavBar />
-		</div>
-	);
+	render() {
+		return (
+			<div className="header" style={this.headerStyle}>
+				<Logo logo={logo}/>
+				<NavBar />
+			</div>
+		);
+	}
+
 };
 
 export default Header;

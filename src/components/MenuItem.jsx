@@ -10,11 +10,9 @@ const menuItemStyle = {
 	color: '#757c8b'
 };
 
-
-
 const MenuItem = (props) => {
 	return (
-		<Link to={props.id} duration={500} offset={-200} smooth={true}>
+		<Link to={props.id} duration={500} offset={-120} smooth={true}>
 				<Button variant="text" style={menuItemStyle} className='menuItem'> {props.text} </Button>
 		</Link>
 	);

@@ -4,7 +4,8 @@ import MenuItemBurger from './MenuItemBurger';
 import { Breakpoint } from 'react-socks';
 
 const navBarStyle = {
-	alignSelf: 'flex-start'
+	alignSelf: 'flex-start',
+	padding: 20
 }
 
 const smallScreenMenuStyle = {
