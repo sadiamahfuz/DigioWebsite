@@ -30,8 +30,7 @@ const imageDivStyleSmall = {
 };
 
 const imageStyle = {
-  	height: 200,
-  	width: 300
+  	maxWidth: 350
 };
 
 const titleStyle = {

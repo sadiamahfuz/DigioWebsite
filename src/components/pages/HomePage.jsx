@@ -13,8 +13,9 @@ export class HomePage extends Component {
 	};
 
 	imageStyle = {
-		maxWidth: 400,
-		marginTop: 10
+		maxWidth: 800,
+		marginTop: 10,
+		width: '100%'
 	};
 
 	messageStyle = {

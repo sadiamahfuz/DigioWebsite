@@ -3,7 +3,7 @@ import PageTitle from './PageTitle';
 import { pageStyle } from '../styles/commonStyles';
 import WhatWeDoBox from '../WhatWeDoBox';
 import webApp from '../../images/webApp.png';
-import chatbot from '../../images/chatbot.jpg';
+import chatbot from '../../images/chatbot.png';
 import seoImage from '../../images/seo.jpg';
 import data from '../../images/data.jpg';
 import contentImage from '../../images/content.jpg';
