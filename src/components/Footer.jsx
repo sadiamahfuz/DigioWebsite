@@ -28,6 +28,19 @@ const footerStyleSmall = {
     padding: 5
 };
 
+const logoStyleSmall = {
+    float: 'left',
+    marginLeft: 10,
+    height: 45,
+    width: 100,
+    alignSelf: 'center'
+};
+
+const logoDivStyleSmall = {
+    height: 45,
+    width: 100
+};
+
 const Footer = () => {
     return (
         <div>
@@ -40,7 +53,7 @@ const Footer = () => {
             <Breakpoint small only>
                 <div style={footerStyleSmall}>
                     <ContactDetailsCard />
-                    <Logo logo={logo}/>
+                    <Logo logo={logo} logoStyle={logoStyleSmall} divStyle={logoDivStyleSmall}/>
                 </div>
             </Breakpoint>
         </div>
