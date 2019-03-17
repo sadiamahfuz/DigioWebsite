@@ -2,17 +2,21 @@ import React from 'react';
 import { Breakpoint } from 'react-socks';
 
 const descriptionStyle = {
-  overflow: 'auto',
-  display: 'flex',
-  justifyContent: 'center',
-  marginBottom: 20,
-  marginLeft: 20
+    overflow: 'auto',
+    display: 'flex',
+    justifyContent: 'center',
+    marginBottom: 20,
+    marginLeft: 20,
+    fontWeight: 300,
+    fontSize: 18
 };
 
 const descriptionStyleSmall = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center'
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    fontWeight: 300,
+    fontSize: 18
 };
 
 const imageDivStyleWide = {

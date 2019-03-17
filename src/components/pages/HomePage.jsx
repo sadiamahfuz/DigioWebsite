@@ -13,12 +13,6 @@ export class HomePage extends Component {
 		maxWidth: 800
 	};
 
-	smallTextStyle = {
-		fontWeight: 300,
-		fontSize: 20,
-		maxWidth: 800
-	};
-
 	imageStyle = {
 		maxWidth: 400,
 		marginTop: 10
