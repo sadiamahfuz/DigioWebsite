@@ -43,7 +43,7 @@ const Title = (props) => {
   return (
     <h1 style={titleStyle}> {props.title} </h1>
   );
-}
+};
 
 const Description = (props) => {
   return (

@@ -3,7 +3,7 @@ import '../App.css';
 
 const logoDivStyle = {
 	height: 90,
-  width: 200
+  	width: 200
 };
 
 const logoStyle = {
