@@ -33,13 +33,13 @@ const OurWork = () => {
 	return (
 		<div className='ourWork' style={pageStyle} id="services">
 			<PageTitle title='Technology and Product Development' />
-			<WhatWeDoBox style={whatWeDoBoxStyle} title="Web & App Development" description={webAppText} image={webApp}/>
-			<WhatWeDoBox title="Software Solutions & Applications" description={software} image={softwareImage}/>
-			<WhatWeDoBox title="Data Science & Machine Learning Solutions" description={machineLearning} image={data}/>
+			<WhatWeDoBox style={whatWeDoBoxStyle} title="Web & Mobile Apps" description={webAppText} image={webApp}/>
+			<WhatWeDoBox title="Software Applications" description={software} image={softwareImage}/>
+			<WhatWeDoBox title="Data Science & Machine Learning" description={machineLearning} image={data}/>
 			<WhatWeDoBox title="Hardware Prototyping" description={hardwarePrototyping} image={chatbot}/>
 			<PageTitle title='Digital Marketing' />
             <WhatWeDoBox title="Social Media Ads" description={ads} image={social}/>
-            <WhatWeDoBox title="Search Engine Optimisation" description={seo} image={seoImage}/>
+            <WhatWeDoBox title="SEO" description={seo} image={seoImage}/>
             <WhatWeDoBox title="Content Creation" description={contentCreation} image={contentImage}/>
 		</div>
 	);

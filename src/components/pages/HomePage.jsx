@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { pageStyle } from '../styles/commonStyles';
-import Typing from 'react-typing-animation';
 import Button from '@material-ui/core/Button';
 import image from '../../images/homePageImage.jpg';
 import Image from '../Image';
@@ -35,9 +34,9 @@ export class HomePage extends Component {
 							<strong><i> Digital Marketing </i></strong>
 							to
 							<strong><i> Web  </i></strong>
-							and
+							&
 							<strong><i> Application Development </i></strong>
-							and
+							&
 							<strong><i> Hardware Prototyping</i></strong>.
 						</p>
 						<p style={this.style}> We are passionate about meeting your digital needs so you can focus on the things that are important to you. </p>

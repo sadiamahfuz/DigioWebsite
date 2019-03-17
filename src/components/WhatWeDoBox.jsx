@@ -2,13 +2,13 @@ import React from 'react';
 import { Breakpoint } from 'react-socks';
 
 const descriptionStyle = {
-    overflow: 'auto',
     display: 'flex',
     justifyContent: 'center',
     marginBottom: 20,
     marginLeft: 20,
     fontWeight: 300,
-    fontSize: 18
+    fontSize: 18,
+    maxWidth: 800
 };
 
 const descriptionStyleSmall = {
