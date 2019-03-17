@@ -25,15 +25,11 @@ const seo = "We will perform search engine optimisations so that your product an
 
 const contentCreation = "We will develop and implement a tailored content creation strategy so that you can consistently reach and appeal to the right audience and derive maximum value.";
 
-const whatWeDoBoxStyle = {
-	maxWidth: 400
-};
-
 const OurWork = () => {
 	return (
 		<div className='ourWork' style={pageStyle} id="services">
 			<PageTitle title='Technology and Product Development' />
-			<WhatWeDoBox style={whatWeDoBoxStyle} title="Web & Mobile Apps" description={webAppText} image={webApp}/>
+			<WhatWeDoBox title="Web & Mobile Apps" description={webAppText} image={webApp}/>
 			<WhatWeDoBox title="Software Applications" description={software} image={softwareImage}/>
 			<WhatWeDoBox title="Data Science & Machine Learning" description={machineLearning} image={data}/>
 			<WhatWeDoBox title="Hardware Prototyping" description={hardwarePrototyping} image={chatbot}/>

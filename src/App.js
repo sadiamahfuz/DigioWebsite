@@ -15,8 +15,11 @@ setDefaultBreakpoints([
 
 class App extends Component {
   pageStyle = {
-    display: 'flex',
-    flexDirection: 'column'
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      marginRight: 'auto',
+      marginLeft: 'auto'
   }
 
   render() {
