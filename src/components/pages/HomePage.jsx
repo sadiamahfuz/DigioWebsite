@@ -32,10 +32,8 @@ export class HomePage extends Component {
 	render() {
 		return (
 				<div className='homePage' style={pageStyle} id="home">
-					<Typing>
 						<h1> Hello, </h1>
 						<h1> Welcome to Digio! </h1>
-					</Typing>
 					<div style={this.messageStyle}>
 						<p style={this.style}> We are a
 							<strong><i> Creative Digital Agency </i></strong>

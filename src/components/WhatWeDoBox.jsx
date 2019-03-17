@@ -30,9 +30,14 @@ const imageStyle = {
   	width: 300
 };
 
+const titleStyle = {
+    fontSize: 20,
+    fontWeight: 700
+};
+
 const Title = (props) => {
   return (
-    <h5> {props.title} </h5>
+    <h1 style={titleStyle}> {props.title} </h1>
   );
 }
 
@@ -45,34 +50,25 @@ const Description = (props) => {
 const Image = (props) => {
   return (
     <div style={props.style}>
-      <img src="https://placeimg.com/640/480/any" alt="anImage" style={imageStyle} />
+      <img src={props.image} alt="anImage" style={imageStyle} />
     </div>
   );
 };
 
-const WhatWeDoBox = () => {
-  // eslint-disable-next-line
-  const homePageText = "Lorem ipsum dolor sit amet, an iusto incorrupte ius, putent incorrupte mea eu, ne reque dissentiet vix. \
-	Ei hinc nihil delectus quo, cum at malis dicat intellegebat, dicta aperiam accumsan at nec. \
-	Tractatos ocurreret ex eum. Sed idque postea postulant ut. Velit commune duo cu, pro lorem cetero temporibus eu. \
-	Utinam civibus voluptua id per. \
-	Aliquip meliore ex vix, ex nusquam epicurei liberavisse est. \
-	Pro cu vero nullam praesent, vim in fabulas nonumes apeirian, in vel dicta phaedrum. \
-	Habemus corpora reprimique ad sit, mel ut minim sadipscing, vitae iudicabit eos eu. \
-	Inani omnium quo in, et quem congue vel."
+const WhatWeDoBox = (props) => {
   return (
-    <div className="whatWeDoBox">
-      <Title title="PRODUCT OR SERVICE NAME" />
+    <div className="whatWeDoBox" style={props.styles}>
+      <Title title={props.title} />
       <Breakpoint medium up>
         <div className="description" style={descriptionStyle}>
-          <Description text={homePageText}/>
-          <Image style={imageDivStyleWide}/>
+          <Description text={props.description}/>
+          <Image style={imageDivStyleWide} image={props.image}/>
         </div>
       </Breakpoint>
       <Breakpoint small only>
         <div className="descriptionSmall" style={descriptionStyleSmall}>
-          <Image style={imageDivStyleSmall}/>
-          <Description text={homePageText}/>
+          <Image style={imageDivStyleSmall} image={props.image}/>
+          <Description text={props.description}/>
         </div>
       </Breakpoint>
     </div>
