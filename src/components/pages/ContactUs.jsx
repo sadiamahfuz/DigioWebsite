@@ -3,6 +3,8 @@ import PageTitle from './PageTitle';
 import { pageStyle } from '../styles/commonStyles';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import image from '../../images/meeting.jpg';
+import Image from '../Image';
 import * as emailjs from 'emailjs-com';
 
 export class ContactUs extends Component  {
@@ -59,6 +61,12 @@ export class ContactUs extends Component  {
 		});
 	};
 
+    imageStyle = {
+        maxWidth: 800,
+        marginTop: 10,
+        width: '100%'
+    };
+
 	render() {
 		return (
 			<div className='contactUs' style={pageStyle} id="contact">
@@ -71,6 +79,8 @@ export class ContactUs extends Component  {
 					SUBMIT
 				</Button>
 				</div>
+                <Image image={image} style={this.imageStyle} />
+
 			</div>
 		);
 	}
