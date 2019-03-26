@@ -1,51 +1,63 @@
-import React from 'react';
+import React, {Component} from 'react';
 import MenuItem from './MenuItem';
 import MenuItemBurger from './MenuItemBurger';
 import { Breakpoint } from 'react-socks';
 
-const navBarStyle = {
-	alignSelf: 'flex-start',
-}
 
-const smallScreenMenuStyle = {
-	display: 'none'
-};
+class NavBar extends Component {
 
-const burgerMenuIconStyle = {
-	color: '#757c8b',
-};
+    constructor(props) {
+        super(props);
+        this.state = {
+            windowWidth: window.innerWidth,
+            mobileNavVisible: false
+        };
+    }
 
-const navItems = [
-	{text: 'Home', selected: true, id:'home'},
-	{text: 'Our Services', selected: false, id: 'services'},
-	{text: 'Contact Us', selected: false, id: 'contact'}
-];
-
-const burgerToggle = () => {
-  let linksEl = document.querySelector('.smallScreenMenu');
-  if (linksEl.style.display === 'block') {
+     burgerToggle = () => {
+        let linksEl = document.querySelector('.smallScreenMenu');
+        if (linksEl.style.display === 'block') {
             linksEl.style.display = 'none';
         } else {
             linksEl.style.display = 'block';
         }
-};
+    };
 
-export const NavBar = (props) => {
+	render() {
+        const navBarStyle = {
+            alignSelf: 'flex-start',
+        };
 
-	const navItemsMapped = navItems.map(item => <MenuItem text={item.text} id={item.id}/>);
-	const navItemsMappedBurger = navItems.map(item => <MenuItemBurger text={item.text} id={item.id} onClick={burgerToggle}/>);
+        const smallScreenMenuStyle = {
+            display: 'none'
+        };
 
-	return (
-		<div className="navBar" style={navBarStyle}>
-		 	<Breakpoint medium up>
-				{navItemsMapped}
-			</Breakpoint>
-			<Breakpoint small only>
-				<i className="fa fa-bars fa-2x" onClick={burgerToggle} style={burgerMenuIconStyle}></i>
-				<div className="smallScreenMenu" style={smallScreenMenuStyle}> {navItemsMappedBurger} </div>
-			</Breakpoint>
-		</div>
-	);
+        const burgerMenuIconStyle = {
+            color: '#757c8b',
+        };
+
+        const navItems = [
+            {text: 'Home', selected: true, id:'home'},
+            {text: 'Our Services', selected: false, id: 'services'},
+            {text: 'Contact Us', selected: false, id: 'contact'}
+        ];
+
+        const navItemsMapped = navItems.map(item => <MenuItem text={item.text} id={item.id}/>);
+        const navItemsMappedBurger = navItems.map(item => <MenuItemBurger text={item.text} id={item.id} onClick={this.burgerToggle}/>);
+
+        return (
+            <div className="navBar" style={navBarStyle}>
+                <Breakpoint medium up>
+                    {navItemsMapped}
+                </Breakpoint>
+                <Breakpoint small only>
+                    <i className="fa fa-bars fa-2x" onClick={this.burgerToggle} style={burgerMenuIconStyle}></i>
+                    <div className="smallScreenMenu" style={smallScreenMenuStyle}> {navItemsMappedBurger} </div>
+                </Breakpoint>
+            </div>
+        );
+	}
+
 };
 
 export default NavBar;
