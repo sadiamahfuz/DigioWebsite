@@ -2,15 +2,13 @@ import React from 'react';
 import '../App.css';
 
 const defaultLogoDivStyle = {
-	height: 90,
-  	width: 200
+  width: 160
 };
 
 const defaultLogoStyle = {
   	float: 'left',
   	marginLeft: 10,
-  	height: 90,
-  	width: 200,
+  	width: 160,
   	alignSelf: 'center'
 };
 
