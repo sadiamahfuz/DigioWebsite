@@ -7,7 +7,8 @@ const menuItemStyle = {
 	paddingRight: 10,
 	display: 'block',
 	cursor: 'pointer',
-	color: '#757c8b'
+	color: '#757c8b',
+	width: '100%'
 };
 
 const MenuItemBurger = (props) => {

@@ -25,13 +25,8 @@ class Header extends Component {
 
         this.mobileMenuStyle = {
             zIndex: 20,
-			marginLeft: 'auto',
-			marginRight: 'auto'
-        };
-
-        this.mobileMenuStyle = {
-            display: 'flex',
-            flexDirection: 'column'
+            justifyContent: 'center',
+            alignItems: 'center'
         };
 
         this.state = {
@@ -76,6 +71,7 @@ class Header extends Component {
                     	<Logo logo={logo}/>
                     	<i className="fa fa-bars fa-2x" onClick={() => this.toggleMenuOnClick()} style={this.burgerMenuIconStyle}></i>
 					</div>
+                    <hr></hr>
                     <div className="navItems" style={this.mobileMenuStyle}> {navItemsMappedBurger} </div>
                 </div>
             )
