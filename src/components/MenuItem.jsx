@@ -12,10 +12,10 @@ const menuItemStyle = {
 
 const MenuItem = (props) => {
 	return (
-		<Link to={props.id} duration={500} offset={-10} smooth={true}>
+		<Link to={props.id} duration={500} offset={-100} smooth={true}>
 				<Button variant="text" style={menuItemStyle} className='menuItem'> {props.text} </Button>
 		</Link>
 	);
-}
+};
 
 export default MenuItem;

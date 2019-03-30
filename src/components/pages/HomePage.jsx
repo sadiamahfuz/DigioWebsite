@@ -8,12 +8,11 @@ import { Link } from "react-scroll";
 export class HomePage extends Component {
 	style = {
 		fontWeight: 300,
-		fontSize: 20,
-		maxWidth: 800
+		fontSize: 20
 	};
 
 	imageStyle = {
-		maxWidth: 800,
+		maxWidth: 1000,
 		marginTop: 10,
 		width: '100%'
 	};

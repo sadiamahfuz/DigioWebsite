@@ -4,19 +4,33 @@ import logo from '../images/transparent.png';
 import MenuItem from "./MenuItem";
 import MenuItemBurger from "./MenuItemBurger";
 
+
 class Header extends Component {
 
     constructor(props) {
         super(props);
 
-        this.headerStyle = {
+        this.wideHeaderStyle = {
             height: 'auto',
-            padding: 20,
+            padding: 10,
             display: 'flex',
             justifyContent: 'space-between',
             zIndex: 10,
-            backgroundColor: 'white',
-            width: '90%'
+            backgroundColor: 'white'
+        };
+
+        this.mobileNavOpenHeaderStyle = {
+            height: 'auto',
+            zIndex: 10,
+            backgroundColor: 'white'
+        };
+
+        this.mobileNavOpenTopHeaderStyle = {
+            padding: 10,
+            display: 'flex',
+            justifyContent: 'space-between',
+            zIndex: 10,
+            backgroundColor: 'white'
         };
 
         this.burgerMenuIconStyle = {
@@ -26,50 +40,29 @@ class Header extends Component {
         this.mobileMenuStyle = {
             zIndex: 20,
             justifyContent: 'center',
-            alignItems: 'center'
+            alignItems: 'center',
+            flex: 1
         };
 
         this.state = {
-            windowWidth: window.innerWidth,
-            mobileNavVisible: false,
             navItems : [
                 {text: 'Home', selected: true, id:'home'},
                 {text: 'Our Services', selected: false, id: 'services'},
                 {text: 'Contact Us', selected: false, id: 'contact'}
             ]
         };
-    }
 
-    handleResize() {
-        this.setState({windowWidth: window.innerWidth});
     }
-
-    componentDidMount() {
-        window.addEventListener('resize', this.handleResize.bind(this));
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.handleResize.bind(this));
-    }
-
-    toggleMenuOnClick() {
-    	if (this.state.mobileNavVisible) {
-    		this.setState({...this.state, mobileNavVisible: false});
-		}
-		else {
-            this.setState({...this.state, mobileNavVisible: true});
-		}
-	}
 
     renderMobileHeader() {
-        const navItemsMappedBurger = this.state.navItems.map(item => <MenuItemBurger text={item.text} id={item.id} onClick={() => this.toggleMenuOnClick()}/>);
+        const navItemsMappedBurger = this.state.navItems.map(item => <MenuItemBurger text={item.text} id={item.id} onClick={() => this.props.onMobileMenuClicked()}/>);
 
-        if (this.state.mobileNavVisible) {
+        if (this.props.mobileNavVisible) {
             return (
-                <div className="mobileHeader">
-					<div style={this.headerStyle}>
+                <div className="mobileHeader" style={this.mobileNavOpenHeaderStyle}>
+					<div style={this.mobileNavOpenTopHeaderStyle}>
                     	<Logo logo={logo}/>
-                    	<i className="fa fa-bars fa-2x" onClick={() => this.toggleMenuOnClick()} style={this.burgerMenuIconStyle}></i>
+                    	<i className="fa fa-bars fa-2x" onClick={() => this.props.onMobileMenuClicked()} style={this.burgerMenuIconStyle}></i>
 					</div>
                     <hr></hr>
                     <div className="navItems" style={this.mobileMenuStyle}> {navItemsMappedBurger} </div>
@@ -79,9 +72,9 @@ class Header extends Component {
 
         return (
             <div className="mobileHeader">
-                <div style={this.headerStyle}>
+                <div style={this.wideHeaderStyle}>
     				<Logo logo={logo}/>
-                	<i className="fa fa-bars fa-2x" onClick={() => this.toggleMenuOnClick()} style={this.burgerMenuIconStyle}></i>
+                	<i className="fa fa-bars fa-2x" onClick={() => this.props.onMobileMenuClicked()} style={this.burgerMenuIconStyle}></i>
 				</div>
 			</div>
 		)
@@ -90,7 +83,7 @@ class Header extends Component {
 	renderWideHeader() {
         const navItemsMapped = this.state.navItems.map(item => <MenuItem text={item.text} id={item.id}/>);
         return (
-            <div className="wideHeader" style={this.headerStyle}>
+            <div className="wideHeader" style={this.wideHeaderStyle}>
                 <Logo logo={logo}/>
                 <div className="navItems">{navItemsMapped}</div>
             </div>
@@ -98,7 +91,7 @@ class Header extends Component {
 	}
 
 	render() {
-    	if (this.state.windowWidth < 1000) {
+    	if (this.props.windowWidth < 1000) {
     		return (
                 this.renderMobileHeader()
 			)
